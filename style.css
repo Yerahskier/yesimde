@@ -1,0 +1,171 @@
+/* Yesimde: общий стиль сайта. Палитра как в приложении, тема по системе. */
+:root {
+  color-scheme: light dark;
+  --text: #1f1a17;
+  --muted: #6b625c;
+  --bg: #fffaf5;
+  --surface: #f7ede4;
+  --line: #e8ddd3;
+  --accent: #b4532a;
+  --on-accent: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f2ebe5;
+    --muted: #b3a79e;
+    --bg: #120b08;
+    --surface: #1f1510;
+    --line: #3a2a22;
+    --accent: #f08a5d;
+    --on-accent: #1f0d05;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+img { max-width: 100%; display: block; }
+
+/* Шапка: значок, название, языки. */
+.top {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-right: auto;
+}
+.brand img { width: 36px; height: 36px; border-radius: 10px; }
+.langs { display: flex; gap: 4px; }
+.langs a {
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.langs a[aria-current="true"] { background: var(--accent); color: var(--on-accent); }
+
+/* Языковые разделы. Со скриптом виден только выбранный, без него — все подряд. */
+html[data-lang="kk"] [data-l]:not([data-l="kk"]),
+html[data-lang="ru"] [data-l]:not([data-l="ru"]),
+html[data-lang="en"] [data-l]:not([data-l="en"]) { display: none; }
+/* Якорь языка (#ru) выбирает раздел, а не место: страница остаётся вверху, с шапкой. */
+html[data-lang] .lang-section { border-bottom: 0; scroll-margin-top: 100vh; }
+
+.lang-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+  border-bottom: 1px solid var(--line);
+}
+.pages {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 8px 0 16px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.pages a { font-weight: 600; text-decoration: none; }
+.pages a[aria-current="page"] { color: var(--text); }
+
+h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.2em; margin: 28px 0 6px; line-height: 1.3; }
+p, li { margin: 6px 0; }
+.lead { font-size: 1.15em; color: var(--muted); margin: 0 0 20px; }
+.muted { color: var(--muted); }
+
+/* Главная. */
+.hero {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 1024 / 500;
+  max-height: 340px;
+  width: 100%;
+  margin: 0 0 24px;
+  background: var(--surface);
+}
+.hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.notice {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin: 0 0 24px;
+}
+.shots {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(180px, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 4px 0 12px;
+  margin: 8px 0 8px;
+}
+.shots figure { margin: 0; scroll-snap-align: start; }
+.shots img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 540 / 1087;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.shots figcaption { font-size: 0.9em; color: var(--muted); margin-top: 6px; text-align: center; }
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.features div { background: var(--surface); border-radius: 16px; padding: 16px; }
+.features h2 { margin: 0 0 6px; font-size: 1.05em; }
+.features ul { margin: 0; padding-left: 20px; }
+
+/* Поддержка. */
+.mail {
+  display: inline-block;
+  font-size: 1.15em;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  text-decoration: none;
+  margin: 4px 0 8px;
+}
+details {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+}
+summary { cursor: pointer; font-weight: 600; }
+details > :not(summary) { margin-top: 8px; }
+
+/* Политика. */
+.date { color: var(--muted); margin: 0 0 16px; }
+
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  color: var(--muted);
+  font-size: 0.9em;
+}
