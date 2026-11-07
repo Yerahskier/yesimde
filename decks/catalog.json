@@ -1,0 +1,116 @@
+{
+  "format": 1,
+  "updated": "2026-11-08",
+  "decks": [
+    {
+      "id": "english_b2_everyday",
+      "title": "English B2: Everyday Vocabulary",
+      "language": "en",
+      "cards": 194,
+      "size": 17321106,
+      "description": "194 everyday English words at B2 level: feelings, health, clothes, travel, weather and adverbs. Russian and Kazakh translations, definitions, examples, pictures and audio.",
+      "file": "english_b2_everyday.zip",
+      "sha256": "36b54fe4d5db7bc9a940400017aee2e1a71dc3e14e92a5a71650e586d02f0577",
+      "version": 1
+    },
+    {
+      "id": "english_ru",
+      "title": "Английский: первые слова",
+      "language": "ru",
+      "cards": 50,
+      "size": 797948,
+      "description": "Первые английские слова для начинающих: перевод, картинка и озвучка.",
+      "file": "english_ru.zip",
+      "sha256": "ca8f634c2dde4018ec6bd37e69c09d5a7c66da9d229233a5dc3053f22908d8a0",
+      "version": 1
+    },
+    {
+      "id": "physics_ru",
+      "title": "Формулы физики",
+      "language": "ru",
+      "cards": 52,
+      "size": 69796,
+      "description": "Главные формулы школьной физики: что означает каждая буква и в чём измеряется.",
+      "file": "physics_ru.zip",
+      "sha256": "d9ffcb54741f8d70fc4e9a5c5cfe210b3cbf51436a8e9dee0c171b2ab17c0716",
+      "version": 1
+    },
+    {
+      "id": "geography_ru",
+      "title": "География: страны и столицы",
+      "language": "ru",
+      "cards": 100,
+      "size": 2272257,
+      "description": "Страны и их столицы с флагами.",
+      "file": "geography_ru.zip",
+      "sha256": "01a7fc5dafe83615156727b5a29f168738d2d5bcc0035ec4dc6ddfe6d6325fdd",
+      "version": 1
+    },
+    {
+      "id": "english_kk",
+      "title": "Ағылшын тілі: алғашқы сөздер",
+      "language": "kk",
+      "cards": 50,
+      "size": 797972,
+      "description": "Жаңадан бастаушыларға арналған алғашқы ағылшын сөздері: аударма, сурет және дыбыс.",
+      "file": "english_kk.zip",
+      "sha256": "a718643f01cfbb06694a34146082113706c22a2bb3e9eb0a4be922f6d1464fef",
+      "version": 1
+    },
+    {
+      "id": "physics_kk",
+      "title": "Физика формулалары",
+      "language": "kk",
+      "cards": 52,
+      "size": 69886,
+      "description": "Мектеп физикасының негізгі формулалары: әр әріп нені білдіреді және немен өлшенеді.",
+      "file": "physics_kk.zip",
+      "sha256": "a5e8e02b9e2a971324541aae80fd69290316f4b4263fefb7bf5f9641c1af7b05",
+      "version": 1
+    },
+    {
+      "id": "geography_kk",
+      "title": "География: елдер мен астаналар",
+      "language": "kk",
+      "cards": 100,
+      "size": 2713078,
+      "description": "Елдер мен олардың астаналары, жалауларымен.",
+      "file": "geography_kk.zip",
+      "sha256": "22c491390785e8c1cef580832fcb546d4a22c848e1e29b15a8b7c481d5b33cd6",
+      "version": 1
+    },
+    {
+      "id": "kazakh_en",
+      "title": "Kazakh: first words",
+      "language": "en",
+      "cards": 50,
+      "size": 812709,
+      "description": "First Kazakh words for beginners, with translations, pictures and audio.",
+      "file": "kazakh_en.zip",
+      "sha256": "1713988519b187aac01afa3c61c91d9557e8089f2d2b7c290fa30f0f96c243a0",
+      "version": 1
+    },
+    {
+      "id": "physics_en",
+      "title": "Physics formulas",
+      "language": "en",
+      "cards": 52,
+      "size": 70128,
+      "description": "Key school physics formulas: what each letter means and its unit.",
+      "file": "physics_en.zip",
+      "sha256": "274e915424a0cd21adea0310905e296dcc6ece222bf07fec19e56b1358b10bf8",
+      "version": 1
+    },
+    {
+      "id": "geography_en",
+      "title": "Geography: countries and capitals",
+      "language": "en",
+      "cards": 100,
+      "size": 2775320,
+      "description": "Countries and their capitals, with flags.",
+      "file": "geography_en.zip",
+      "sha256": "b0f87220426cc9506d523d3d8d2294f1dea20ee248d0a81e0c434838c5a6f49f",
+      "version": 1
+    }
+  ]
+}
