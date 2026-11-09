@@ -40,6 +40,19 @@
     if (title) document.title = title.content;
   }
 
+  // Кнопки Google Play: пока приложение в закрытом тесте, у всех, кто не в тесте,
+  // страница Play пустая. Тогда кнопка без ссылки и с подписью «скоро»
+  // (data-soon). После выхода рабочей версии поставить true.
+  var PLAY_OPEN = false;
+  if (!PLAY_OPEN) {
+    var play = document.querySelectorAll('a[data-play]');
+    for (var p = 0; p < play.length; p++) {
+      play[p].removeAttribute('href');
+      play[p].setAttribute('aria-disabled', 'true');
+      play[p].classList.add('soon');
+    }
+  }
+
   var hashLang = fromHash();
   var lang = hashLang || stored();
   if (langs.indexOf(lang) < 0) lang = fromBrowser();
